@@ -1,7 +1,7 @@
 var UrlGETpedidos = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=GetPedidos';
 var UrlPostPRoveedor = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=InsertarPedido';
-var UrlGepedido = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=GetUno';
-var URlPutPedido = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=UpdatePedido';
+var UrlGetpedido = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=GetUno';
+var UrlPutPedido = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=UpdatePedido';
 var urldeletepedido = 'http://localhost:90/G1_20/pedidos/controller/pedidos.php?op=deletePedido';
 
 
@@ -74,7 +74,7 @@ function cargarPedido(idpedido){
     var datospedidojson = JSON.stringify(datospedido);
 
     $.ajax({
-        url: UrlGepedido,
+        url: UrlGetpedido,
         type: 'POST',
         data:datospedidojson,
         datatype: 'application/json',
@@ -110,7 +110,7 @@ function ActualizarPedido(idpedido){
     var datospedidojson = JSON.stringify(datospedido);
 
     $.ajax({
-        url: URlPutPedido,
+        url: UrlPutPedido,
         type: 'PUT',
         data: datospedidojson,
         datatype:'application/json',
